@@ -1,7 +1,7 @@
 import React from "react";
 import Counter from "../components/share/Counter";
 import { Metadata } from "next";
-
+import ErrorWrapper from "../components/share/ErrorWrapper";
 export const metaData: Metadata = {
   title: {
     absolute: "Home",
@@ -11,10 +11,12 @@ export const metaData: Metadata = {
 const Home = () => {
   return (
     <React.Fragment>
-      <section>
-        Home
-        <Counter />
-      </section>
+      <ErrorWrapper>
+        <section>
+          Home
+          <Counter />
+        </section>
+      </ErrorWrapper>
     </React.Fragment>
   );
 };

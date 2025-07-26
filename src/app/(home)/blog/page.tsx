@@ -1,3 +1,4 @@
+import ErrorWrapper from "@/app/components/share/ErrorWrapper";
 import { Metadata } from "next";
 import React from "react";
 
@@ -9,7 +10,9 @@ export const metaData: Metadata = {
 const BlogPage = async () => {
   return (
     <React.Fragment>
-      <section>Blog page</section>
+      <ErrorWrapper>
+        <section>Blog page</section>
+      </ErrorWrapper>
     </React.Fragment>
   );
 };

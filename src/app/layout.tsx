@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 import { Geist, Geist_Mono } from "next/font/google";
+import ErrorWrapper from "./components/share/ErrorWrapper";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -30,7 +31,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistMono.variable} ${geistSans.variable} `}>
+        {/* <ErrorWrapper> */}
         <main className="lg:px-10">{children}</main>
+        {/* </ErrorWrapper> */}
       </body>
     </html>
   );
