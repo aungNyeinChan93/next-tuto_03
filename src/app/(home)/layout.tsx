@@ -30,10 +30,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistMono.variable} ${geistSans.variable} `}>
-        <section className="lg:px-10">
+        <main className="lg:px-10">
           <Navbar />
           {children}
-        </section>
+        </main>
       </body>
     </html>
   );
