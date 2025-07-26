@@ -2,6 +2,7 @@
 
 import React from "react";
 
+// global not found!
 const NotFound = () => {
   return (
     <React.Fragment>
