@@ -5,6 +5,7 @@ const HomePage = async () => {
   return (
     <React.Fragment>
       <section>
+        home
         <Test />
       </section>
     </React.Fragment>
