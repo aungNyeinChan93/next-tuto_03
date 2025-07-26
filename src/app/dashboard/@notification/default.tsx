@@ -2,12 +2,12 @@ import ErrorWrapper from "@/app/components/share/ErrorWrapper";
 import Link from "next/link";
 import React from "react";
 
-const NotificationPage = async () => {
+const NotificationDefault = async () => {
   return (
     <React.Fragment>
       <ErrorWrapper>
         <main className="w-full p-4 h-screen text-black">
-          Notification Page
+          Notification Default Page
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
             mollitia quisquam voluptates odio, consequuntur a ratione at minima
@@ -26,4 +26,4 @@ const NotificationPage = async () => {
   );
 };
 
-export default NotificationPage;
+export default NotificationDefault;

@@ -1,12 +1,12 @@
 "use client";
 import React from "react";
 import { useRouter } from "next/navigation";
-const MailPage = () => {
+const MailDefault = () => {
   const router = useRouter();
   return (
     <React.Fragment>
       <section className="p-4 w-full h-screen bg-red-300">
-        Mail Page
+        Mail Page Default
         <ul>
           <li>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia
@@ -39,4 +39,4 @@ const MailPage = () => {
   );
 };
 
-export default MailPage;
+export default MailDefault;
