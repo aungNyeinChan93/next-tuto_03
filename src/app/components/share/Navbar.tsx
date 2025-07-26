@@ -18,6 +18,9 @@ const Navbar = async () => {
               <Link href={"/product"}>Product</Link>
             </li>
             <li>
+              <Link href={"/quotes"}>Quotes</Link>
+            </li>
+            <li>
               <Link href={"/register"}>Register</Link>
             </li>
             <li>
