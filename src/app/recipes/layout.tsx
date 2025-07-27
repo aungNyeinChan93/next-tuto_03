@@ -1,5 +1,6 @@
 import React, { ReactNode } from "react";
 import Navbar from "../components/share/Navbar";
+import ErrorWrapper from "../components/share/ErrorWrapper";
 
 interface RecipesLayoutProps {
   children: ReactNode;
@@ -12,11 +13,13 @@ const RecipesLayout: React.FC<RecipesLayoutProps> = async ({
 }) => {
   return (
     <React.Fragment>
-      <main className="">
-        <Navbar />
-        <div className={`${recipe && "opacity-90"}`}>{children}</div>
-        <div className=" z-100 fixed top-50  right-140">{recipe}</div>
-      </main>
+      <ErrorWrapper>
+        <main className="">
+          <Navbar />
+          <div className={`${recipe && "opacity-90"}`}>{children}</div>
+          <div className=" z-100 fixed top-50  right-140">{recipe}</div>
+        </main>
+      </ErrorWrapper>
     </React.Fragment>
   );
 };

@@ -13,9 +13,7 @@ const InterceptRecipe: React.FC<InterceptRecipeProps> = async ({ params }) => {
   const recipe = recipeId && (await getRecipe(recipeId));
   return (
     <React.Fragment>
-      <main className="w-full">
-        <RecipeCard {...recipe} />
-      </main>
+      <main className="w-full">{recipe && <RecipeCard {...recipe} />}</main>
     </React.Fragment>
   );
 };
