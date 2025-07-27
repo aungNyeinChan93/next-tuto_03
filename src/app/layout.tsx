@@ -31,6 +31,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistMono.variable} ${geistSans.variable} `}>
+        <p className="text-red-600 text-xs float-end">Global layout</p>
         {/* <ErrorWrapper> */}
         <main className="lg:px-10">{children}</main>
         {/* </ErrorWrapper> */}

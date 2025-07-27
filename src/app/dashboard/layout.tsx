@@ -1,16 +1,32 @@
-import React, { ReactNode } from "react";
+"use client";
+import React, { ReactNode, useState } from "react";
 
 interface DashboardProps {
   children: ReactNode;
   notification: ReactNode;
   mail: ReactNode;
+  login: ReactNode;
 }
 
-const DashboardLayout: React.FC<DashboardProps> = async ({
+const DashboardLayout: React.FC<DashboardProps> = ({
   children,
   notification,
   mail,
+  login,
 }) => {
+  const [auth, setAuth] = useState(true);
+
+  if (auth) {
+    return (
+      <>
+        <div>{login}</div>
+        <button type="button" onClick={() => setAuth((prev) => !prev)}>
+          Change Auth
+        </button>
+      </>
+    );
+  }
+
   return (
     <React.Fragment>
       <p>Dashboard Layout</p>
