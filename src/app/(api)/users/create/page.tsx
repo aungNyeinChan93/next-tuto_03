@@ -21,7 +21,7 @@ interface User {
   userType: UserType;
 }
 
-export const createUser = async (newUser: any) => {
+export const createUser = async (newUser: User) => {
   const response = await fetch(`http://localhost:3000/users/api`, {
     method: "POST",
     headers: {
@@ -34,7 +34,7 @@ export const createUser = async (newUser: any) => {
 };
 
 const ComponentName = async () => {
-  const newUser = {
+  const newUser: User = {
     name: "Oliver King",
     email: "oliver.king@example.com",
     gender: "male",
@@ -49,7 +49,6 @@ const ComponentName = async () => {
   };
 
   const user = await createUser(newUser);
-  //   console.log(user);
 
   return (
     <React.Fragment>
