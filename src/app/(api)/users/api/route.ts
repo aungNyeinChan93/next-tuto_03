@@ -15,7 +15,10 @@ export async function POST(request: Request) {
     return new Response(JSON.stringify(user), { status: 201 })
 }
 
-// getUsersByName and byGender , endpoint-> /users/api/ , params ->name=string or gender=male|female
+// getUsersByName and byGender 
+// endpoint ->  /users/api/ , 
+// params ->    name=string or gender=male|female 
+// response ->  usersdata
 export async function GET(request: NextRequest) {
     const { searchParams } = request.nextUrl;
     const name = searchParams.get('name');

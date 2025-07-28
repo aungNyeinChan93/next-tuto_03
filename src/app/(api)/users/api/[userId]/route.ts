@@ -6,7 +6,7 @@ export async function GET(_request: Request, { params }: { params: Promise<{ use
     try {
         const { userId } = await params;
         const user = users.find((user: any) => user.id === Number(userId))
-        if (user) return Response.json({ user })
+        if (user) return Response.json({ user, headers_test: _request.headers.get('name') })
     } catch (error) {
         console.error(error)
     }
