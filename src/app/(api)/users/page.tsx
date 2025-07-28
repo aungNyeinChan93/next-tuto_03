@@ -2,8 +2,8 @@ import React from "react";
 
 export const getUsers = async () => {
   const response = await fetch("http://localhost:3000/users/api");
-  const { users } = await response.json();
-  return users;
+  const { serachUsers } = await response.json();
+  return serachUsers;
 };
 
 const UsersPage = async () => {
