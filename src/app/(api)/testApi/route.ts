@@ -1,5 +1,6 @@
 import { headers, cookies } from "next/headers";
 import { NextRequest } from "next/server";
+import { redirect } from "next/navigation";
 
 // Get header Data in next js!!
 
@@ -14,6 +15,10 @@ import { NextRequest } from "next/server";
 // >>> sec way
 export async function GET(request: NextRequest) {
 
+    // redirect in api !!!awesome 
+    redirect('/users/api');
+
+    // 
     const header = await headers();  // next header
     const auth = header.get('Authorization');
     const name = header.get('name');
