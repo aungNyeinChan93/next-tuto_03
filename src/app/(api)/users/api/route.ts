@@ -25,7 +25,7 @@ export async function GET(request: NextRequest) {
         : gender
             ? users.filter(user => user.gender === gender)
             : users
-    if (serachUsers) return Response.json({ serachUsers })
+    if (serachUsers) return Response.json({ serachUsers, total: Array.isArray(serachUsers) ? serachUsers.length : 1 })
 }
 
 
